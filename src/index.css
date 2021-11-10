@@ -1,0 +1,201 @@
+
+
+* 
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Helvetica Narrow, sans-serif;
+	letter-spacing: 1px;
+}
+
+input, button 
+{
+	border: none;
+	outline: none;
+	background: none;
+}
+
+body 
+{
+	background-color: white;
+}
+
+.App 
+{
+	padding: 30px;
+	margin: 60px auto;
+	width: 70%;
+	background-color: #1b1b1b;
+	box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+header 
+{
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+}
+
+.heading
+{
+	color: white;
+	font-size: 32px;
+	font-weight: 400;
+	text-align: left;
+}
+
+.heading:after 
+{ 
+    content:"";
+    display:block;
+    width: 297px;
+    border-bottom: 3.5px solid rgb(21, 168, 21);
+    margin-top: 4px;
+}
+
+.total-income 
+{
+	color: yellowgreen;
+	font-size: 17px;
+	font-weight: 400;
+	padding: 10px 50px;
+}
+
+.income-form 
+{
+	display: block;
+	margin: 15px;
+	position: relative;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	height: 60px;
+}
+
+.income-form:after 
+{
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 0;
+	border-radius: 10px;
+	transition: 0.2s;
+}
+
+.income-form:focus-within:after 
+{
+	top: -3px;
+	left: -3px;
+	right: -3px;
+	bottom: -3px;
+}
+
+.form-inner 
+{
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	transition: 0.4s;
+	border-radius: 8px;
+	height: 60px;
+	background-color: #2e2d2dcb;
+}
+
+.form-inner input 
+{
+	font-size: 18px;
+	padding: 10px 25px;
+	background-color: #2e2d2dcb;
+	color: rgb(238, 234, 234);
+}
+
+.form-inner input[type="text"] 
+{
+	border-radius: 8px 0px 0px 8px;
+	flex: 1 1 100%;
+}
+
+.form-inner input[type="number"] 
+{
+	border-radius: 0px;
+	min-width: 200px;
+}
+
+.form-inner input[type="submit"] 
+{
+	background-image: linear-gradient(rgb(6, 110, 6), rgb(3, 37, 3));
+	border: 0;
+	border-radius: 0px 8px 8px 0px;
+	box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	letter-spacing: 2px;
+	background-size: 200%;
+	font-size: 15px;	
+	padding: 10px 60px;
+	text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-inner input[type="submit"]:active
+{
+  cursor: pointer;
+  transform: scale(.95);
+}
+
+.income-list 
+{
+	margin: 40px 30px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.income-list .income-item 
+{
+	position: relative;
+	padding: 18px 15px;
+	font-size: small;
+	background-color: #212121;
+	color: #757474d7;
+	height: 50px;
+	margin-bottom: 0px;
+	display: flex;
+	transition: 0.4s;
+	padding-left: 100px;
+	border-bottom: 0.1px solid #0a0909;
+}
+
+.income-list .income-item .remove-item 
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	width: 58px;
+	cursor: pointer;
+	display: block;
+	color: yellowgreen;
+	font-size: large;
+	font-weight: 600;
+}
+
+.income-list .income-item .desc 
+{
+	flex: 1 1 100%;
+}
+
+.income-list .income-item .price,
+.income-list .income-item .count 
+{
+	min-width: 230px;
+}
